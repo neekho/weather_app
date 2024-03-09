@@ -1,9 +1,10 @@
 import requests
 
+from django.conf import settings
 
 
 # Replace with your own API key
-API_KEY = 'REPLACE'
+API_KEY = settings.API_KEY
 
 def current_weather(request, city_name='Makati'):
     
