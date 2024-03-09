@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    {% if response %}
+
+    <h1>{{response.location.name}}, {{response.location.country}} </h1>
+
+    <p>is experiencing {{response.current.temp_c}} celsius of weather</p>
+    <p>a weather condition of {{response.current.condition.text}}</p>
+    <img src="{{response.current.condition.icon}}" alt="weather condition icon">
+
+
+
+    {% else %}
+    <h1>Please make a search, input a city name</h1>
+
+    {% endif %}
+
+</body>
+
+</html>
