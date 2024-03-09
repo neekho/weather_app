@@ -1,6 +1,9 @@
 import requests
 
-API_KEY = 'zzzzzzzzzzzzzz'
+
+
+# Replace with your own API key
+API_KEY = 'REPLACE'
 
 def current_weather(request, city_name='Makati'):
     

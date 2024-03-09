@@ -12,10 +12,17 @@ from . requests import current_weather
 
 
 
+
+
 def home(request):
+    '''
+        accept and handle user input using forms.py in this case we created CityForm
+    	we make requests using the requests.py
+        see base.html in the templates folder.
+
+    '''
     
     api_response = {}
-    
     
     if request.method == 'POST':
         city_input = CityForm(request.POST) # from /forms.py
@@ -30,8 +37,10 @@ def home(request):
             
             
             if 'error' in api_response:
+                # This handles if a user tries to input a non existing city or an invalid input.
                 error_message = api_response['error']['message']
                 api_response = {'error': f"Error fetching data: {error_message}"}
+                print(api_response)
     
     else:
         city_input = CityForm()          

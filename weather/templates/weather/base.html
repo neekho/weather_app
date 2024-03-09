@@ -18,6 +18,7 @@
     </form>
 
     {% if response and not response.error %}
+        <!-- if there is content in the api response and there are no errors, then display them -->
 
         <h1>{{response.location.name}}, {{response.location.country}} </h1>
 
