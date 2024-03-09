@@ -13,7 +13,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Repo
 A repo for BSIT 2A students. This is only a learner's module
-
+![Landing](./guide/Home.PNG)
 
 
 
@@ -67,6 +67,7 @@ _Once installed, open a command prompt, choose your directory wherein you want t
 4. Create a .env in your project's root folder
    
 5. Inside the .env file, write API_KEY=YOUR_ACTUAL_API_KEY, then on a new line, DEBUG=True
+![Step4-5](./guide/Step5.PNG)
    
 6. Run the local server either specify a port number or use the default (8000)
    ```sh
