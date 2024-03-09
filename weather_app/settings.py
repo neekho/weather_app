@@ -11,7 +11,14 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+
+
 from decouple import config
+
+# pip install python-decouple
+# create .env file -> API_KEY=value, DEBUG=True
+# create .gitignore file -> .env 
+# go to weather > utils.py for more info 
 
 API_KEY = config('API_KEY', default='')
 DEBUG = config('DEBUG', default=False, cast=bool)
