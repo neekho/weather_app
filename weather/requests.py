@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = 'c2fcd24120be45aabc3143744232608'
+API_KEY = 'zzzzzzzzzzzzzz'
 
 def current_weather(request, city_name='Makati'):
     
