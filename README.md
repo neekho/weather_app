@@ -2,45 +2,17 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-       <li>
-      <a href="#api-routes">Routes</a>
-      <ul>
-           <li><a href="#api-routes">API Routes</a></li>
-           <li><a href="#front-end-routes">Front-end Routes</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
 
-  </ol>
-</details>
 
 
 
 <h1 align="center">Weather Web App</h1>
 
-A repo for BSIT 2A students
-_____________________________________________________________________________________________________
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Repo
-
+A repo for BSIT 2A students. This is only a learner's module
 
 
 
@@ -92,8 +64,11 @@ _Once installed, open a command prompt, choose your directory wherein you want t
    ```sh
    C:\Users\PC\weatherapp> pip install -r requirements.txt
    ```
+4. Create a .env in your project's root folder
    
-4. Run the local server either specify a port number or use the default (8000)
+5. Inside the .env file, write API_KEY=YOUR_ACTUAL_API_KEY, then on a new line, DEBUG=True
+   
+6. Run the local server either specify a port number or use the default (8000)
    ```sh
     C:\Users\PC\ceu> python manage.py runserver <OPTIONAL: PORTNUMBER>
    ```
