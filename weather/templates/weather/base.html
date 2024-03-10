@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'weather/index.css' %}">
     <title>Weather App</title>
 </head>
 
@@ -13,7 +15,7 @@
         {% csrf_token %}
 
         {{ city_input.as_p }}
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" />
 
     </form>
 
@@ -26,8 +28,31 @@
         <p>a weather condition of {{response.current.condition.text}}</p>
         <img src="{{response.current.condition.icon}}" alt="weather condition icon">
 
+    {% if forecast %}
+        <h2>Forecast for {{ forecast.location.name }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Weather</th>
+                    <th>High (°C)</th>
+                    <th>Low (°C)</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for day in forecast.forecast.forecastday %} <tr>
+                <td>{{ day.date }}</td>
+                <td>{{ day.day.condition.text }}</td>
+                <td>{{ day.day.maxtemp_c }}</td>
+                <td>{{ day.day.mintemp_c }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
     {% elif response.error %}
-        <h1>{{response.error}}</h1>
+      <h1>{{response.error}}</h1>
 
 
     {% else %}
